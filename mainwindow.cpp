@@ -26,7 +26,7 @@ void MainWindow::on_pb_browse_clicked()
                 ,ui->cb_mosaic->isChecked()? "Images (*.jpg);;All Files (*)" :"Images (*.bmp);;All Files (*)" );
     if (fileName!="") {
         LinearInterpolation linear ;
-        linear.SetPicture(fileName) ;
+        linear.SetPicture(fileName, !ui->cb_mosaic->isChecked()) ;
     }
 
 }
