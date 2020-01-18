@@ -21,8 +21,7 @@ void MainWindow::on_pb_browse_clicked()
 
     QString fileName = QFileDialog::getOpenFileName(
                 this, "Select a file",
-                "D:\Cources\Computer Vision\image_set"
-//                QDir::currentPath()
+                QDir::currentPath()
                 ,ui->cb_mosaic->isChecked()? "Images (*.jpg);;All Files (*)" :"Images (*.bmp);;All Files (*)" );
     if (fileName!="") {
         LinearInterpolation linear ;

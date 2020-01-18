@@ -10,8 +10,9 @@ class LinearInterpolation
 public:
     LinearInterpolation();
     int SetPicture(QString path, bool is_mosaic=false);
+    cv::Mat CalculateDiffrence(cv::Mat org, cv::Mat res);
 private:
-    cv::Mat img, mosaic_img, demosaic, difference;
+    cv::Mat img, mosaic_img, demosaic, difference, org_img;
     int CreateMosaicImage();
     int ApplyFilters() ;
 };
